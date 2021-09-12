@@ -16,10 +16,9 @@ function App() {
       const json = await result.json();
       if (json) {
         setImages(json)
-        console.log(json)
       }
     } catch (e) {
-      // console.log(e)
+      console.log(e)
     }
   }
 
@@ -30,16 +29,7 @@ function App() {
 
   return (
     <div className="gallery">
-      {images ?(
-        <>
-          {images.map((item, key) => (
-            <Images url={ item.urls.full} />
-          ))}
-        </>
-      ):(
-      <div>
-        <p>Coudn't fetch images</p>
-      </div>
+      {images && images.map((Iitem, key) )
       )}
     </div>
   );

@@ -19,7 +19,7 @@ function App() {
         console.log(json)
       }
     } catch (e) {
-      // console.log(e)
+      console.log(e)
     }
   }
 
@@ -33,7 +33,7 @@ function App() {
       {images ?(
         <>
           {images.map((item, key) => (
-            <Images url={ item.urls.full} />
+            <Images url={ item.urls} />
           ))}
         </>
       ):(

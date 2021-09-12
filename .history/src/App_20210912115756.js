@@ -19,7 +19,7 @@ function App() {
         console.log(json)
       }
     } catch (e) {
-      // console.log(e)
+      console.log(e)
     }
   }
 

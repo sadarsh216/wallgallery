@@ -19,7 +19,7 @@ function App() {
         console.log(json)
       }
     } catch (e) {
-      // console.log(e)
+      console.log(e)
     }
   }
 
@@ -30,11 +30,11 @@ function App() {
 
   return (
     <div className="gallery">
-      {images ?(
+      {images ?
         <>
-          {images.map((item, key) => (
-            <Images url={ item.urls.full} />
-          ))}
+          {/* {images.map((item, key) => (
+            <Images url={ item.urls} />
+          ))} */}
         </>
       ):(
       <div>
