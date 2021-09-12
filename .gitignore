@@ -12,8 +12,11 @@
 /build
 
 # misc
+<<<<<<< HEAD
 .history
 .env
+=======
+>>>>>>> parent of 4880c4e (final push)
 .DS_Store
 .env.local
 .env.development.local
