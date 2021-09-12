@@ -5,8 +5,8 @@ import Images from './components/Images'
 function App() {
   const [images, setImages] = useState(null)
   const getGalleryImages = async () => {
-    const endpoint = process.env.REACT_APP_API_LINK
     try {
+      const endpoint = process.env.FETCH_API_LINK;
       const result = await fetch(endpoint, {
         method: 'GET',
         headers: {
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [])
+  }, [images])
   return (
     <div className="gallery">
       {images ? (

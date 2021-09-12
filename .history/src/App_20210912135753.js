@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Images from './components/Images'
+require('dotenv').config()
 
 function App() {
   const [images, setImages] = useState(null)
   const getGalleryImages = async () => {
-    const endpoint = process.env.REACT_APP_API_LINK
+    console.log("URl "+process.env.REACT_APP_API_LINK)
     try {
-      const result = await fetch(endpoint, {
+      const result = await fetch(process.env.REACT_APP_API_LINK, {
         method: 'GET',
         headers: {
           "content-type": "application/json"
@@ -24,7 +25,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [])
+  }, [images])
   return (
     <div className="gallery">
       {images ? (

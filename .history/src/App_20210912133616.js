@@ -5,9 +5,8 @@ import Images from './components/Images'
 function App() {
   const [images, setImages] = useState(null)
   const getGalleryImages = async () => {
-    const endpoint = process.env.REACT_APP_API_LINK
     try {
-      const result = await fetch(endpoint, {
+      const result = await fetch("http://www.mocky.io/v2/5ecb5c353000008f00ddd5a0", {
         method: 'GET',
         headers: {
           "content-type": "application/json"
@@ -24,7 +23,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [])
+  }, [images])
   return (
     <div className="gallery">
       {images ? (
