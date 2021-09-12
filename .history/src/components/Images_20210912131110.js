@@ -2,22 +2,22 @@ import React, { useState } from 'react'
 import Modal from './Modal'
 
 const Images = (props) => {
-    const [expand, setExpand] = useState({
+    const [showModal, setShowModal] = useState({
         show: false,
         url: "",
         alt:""
     })
     const handleClose = () => {
-        setExpand({show:false})
+        setShowModal({show:false})
     }
     return (
         <>
             {props.images.map((item, key) => (
-                <img key={key} src={item.urls.full} alt={item.alt_description} onClick={() => setExpand({ show: true, url: item.urls.full, alt: item.alt_description})} />
+                <img key={key} src={item.urls.full} alt={item.alt_description} onClick={() => setShowModal({show:true,url:item.urls.full})} />
             ))}
-            <Modal  show={expand.show}  handleClose={handleClose}>
+            <Modal  show={showModal.show}  handleClose={handleClose}>
                 <div>
-                    <img src={expand.url} alt={expand.alt}/>
+                    <img src={showModal.url } />
                 </div>
             </Modal>
         </>

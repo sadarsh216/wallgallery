@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Images from './components/Images'
 
-
 function App() {
   const [images, setImages] = useState(null)
   const getGalleryImages = async () => {
@@ -24,7 +23,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [images])
+  }, [])
 
 
   return (

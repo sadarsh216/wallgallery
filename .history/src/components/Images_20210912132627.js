@@ -13,7 +13,7 @@ const Images = (props) => {
     return (
         <>
             {props.images.map((item, key) => (
-                <img key={key} src={item.urls.full} alt={item.alt_description} onClick={() => setExpand({ show: true, url: item.urls.full, alt: item.alt_description})} />
+                <img key={key} src={item.urls.full} alt={item.alt_description} onClick={() => setShowModal({ show: true, url: item.urls.full, alt: item.alt_description})} />
             ))}
             <Modal  show={expand.show}  handleClose={handleClose}>
                 <div>

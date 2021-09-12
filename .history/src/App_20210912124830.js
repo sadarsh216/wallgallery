@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [images])
+  }, [])
 
 
   return (
@@ -34,6 +34,9 @@ function App() {
       ) : (
         <p>Coudn't load images</p>
       )}
+      <Modal show={true} handleClose={}>
+        
+      </Modal>
     </div>
   );
 }

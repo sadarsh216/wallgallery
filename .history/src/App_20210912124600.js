@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Images from './components/Images'
-
+import Modal from './components/Modal';
 
 function App() {
   const [images, setImages] = useState(null)
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     getGalleryImages()
-  }, [images])
+  }, [])
 
 
   return (
